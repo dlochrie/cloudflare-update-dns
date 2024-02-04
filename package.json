@@ -11,7 +11,7 @@
     "start": "npx tsc && node ."
   },
   "bin": {
-    "cloudflare-update-dns": "npx tsc && node ."
+    "cloudflare-update-dns": "npx tsc && node bin/cloudflare-update-dns.js"
   },
   "author": "Daniel Lochrie",
   "license": "ISC",
