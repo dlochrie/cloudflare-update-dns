@@ -1,6 +1,6 @@
 {
   "name": "cloudflare-update-dns",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Updates CloudFlare DNS",
   "main": "build/index.js",
   "repository": {
