@@ -1,8 +1,12 @@
 {
   "name": "cloudflare-update-dns",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Updates CloudFlare DNS",
   "main": "build/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dlochrie/cloudflare-update-dns"
+  },
   "scripts": {
     "start": "npx tsc && node ."
   },
