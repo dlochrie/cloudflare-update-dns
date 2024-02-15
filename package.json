@@ -8,18 +8,22 @@
     "url": "https://github.com/dlochrie/cloudflare-update-dns"
   },
   "scripts": {
-    "start": "npx tsc && node ."
+    "start": "npx tsc && node .",
+    "build": "rm -rf dist && npx tsc"
   },
   "bin": {
-    "cloudflare-update-dns": "npx tsc && node bin/cloudflare-update-dns.js"
+    "cloudflare-update-dns": "bin/cloudflare-update-dns.js"
   },
   "author": "Daniel Lochrie",
   "license": "ISC",
   "dependencies": {
-    "path-to-regexp": "^6.2.1"
+    "node-fetch": "^2.7.0",
+    "path-to-regexp": "^6.2.1",
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
     "@types/node": "^20.11.16",
+    "@types/node-fetch": "^2.6.11",
     "@typescript-eslint/eslint-plugin": "^6.20.0",
     "@typescript-eslint/parser": "^6.20.0",
     "eslint": "^8.56.0",

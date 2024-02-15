@@ -46,7 +46,25 @@ Create a JSON file called `config.json` with the following contents:
 Now, you can run `npm start`, or `npx tsc && node .` from the app root.
 
 Or you can install with `npm i cloudflare-update-dns -g`, and then run `cloudflare-update-dns` from
-you command line.
+you command line:
+
+```
+$ cloudflare-update-dns
+Loading config.json...
+Successfully loaded config.json!
+Fetching records...
+Finished fetching 4 record(s).
+Updating records...
+Attempting to update record "myamazingwebsite.net"...
+Successfully updated record "myamazingwebsite.net"!
+Attempting to update record "stuff.myamazingwebsite.net"...
+Successfully updated record "stuff.myamazingwebsite.net"!
+Attempting to update record "things.myamazingwebsite.net"...
+Successfully updated record "things.myamazingwebsite.net"!
+Attempting to update record "www.myamazingwebsite.net"...
+Successfully updated record "www.myamazingwebsite.net"!
+All records updated
+```
 
 If you want to run a cronjob that runs the script at intervals:
 
