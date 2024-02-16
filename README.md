@@ -29,24 +29,18 @@ Create a JSON file called `config.json` with the following contents:
 }
 ```
 
-...and place it at the root of this application:
+Now, you can run:
 
-```
-/
-  buid/
-  src/
-  ...
-  config.json <-- Here
-  ...
-  package-lock.json
-  package.json
-  ...
+```bash
+# Easiest: If you have Node.js and npx installed:
+npx cloudflare-update-dns -c /path/to/my/config.json
+
+# Or: If you have Node.js and want to install as a bin:
+npm i cloudflare-update-dns -g # This will make "cloudflare-update-dns" available system-wide.
+cloudflare-update-dns -c /path/to/my/config.json
 ```
 
-Now, you can run `npm start`, or `npx tsc && node .` from the app root.
-
-Or you can install with `npm i cloudflare-update-dns -g`, and then run `cloudflare-update-dns` from
-you command line:
+The command will output:
 
 ```
 $ cloudflare-update-dns
@@ -72,6 +66,33 @@ If you want to run a cronjob that runs the script at intervals:
 # Every 5 minutes (change to whatever frequency you prefer).
 */5  * * * * cloudflare-update-dns >> /var/log/cloudflare-update-dns/update.log
 ```
+
+## Dev
+
+Create a JSON file called `config.json` with the following contents:
+
+```json
+{
+  "API_KEY": "<my api key>",
+  "ZONE_ID": "<my zone id>"
+}
+```
+
+And put in the root of this application:
+
+```
+/
+  buid/
+  src/
+  ...
+  config.json <-- Here
+  ...
+  package-lock.json
+  package.json
+  ...
+```
+
+Now, you can run `npm run build && ./bin/cloudflare-update-dns.js -c config.json` from the app root.
 
 ## Troubleshooting
 
