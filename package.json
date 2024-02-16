@@ -9,7 +9,8 @@
   },
   "scripts": {
     "start": "npx tsc && node .",
-    "build": "rm -rf dist && npx tsc"
+    "build": "rm -rf dist && npx tsc",
+    "prepare": "npm run build"
   },
   "bin": {
     "cloudflare-update-dns": "bin/cloudflare-update-dns.js"
